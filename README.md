@@ -6,7 +6,7 @@ Advanced: Personal Portfolio II)**, built with plain HTML and CSS only
 
 ## Live Site
 Live link (after deploying via GitHub Pages):
-`https://<your-github-username>.github.io/portfolio/`
+`https://aliusman89.github.io/Portfolio-Web/`
 
 ## Pages
 | File | Description |
@@ -49,7 +49,7 @@ portfolio/
 1. `git init`
 2. `git add .`
 3. `git commit -m "Initial portfolio commit"`
-4. `git remote add origin https://github.com/<username>/portfolio.git`
+4. `git remote add origin https://github.com/aliusman89/Portfolio-Web`
 5. `git push -u origin main`
 6. On GitHub: **Settings → Pages → Source: main branch → Save**
 7. Live site will be available at `https://<username>.github.io/portfolio/`
