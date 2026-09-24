@@ -1,0 +1,387 @@
+/* =====================================================
+   Ali Usman Tahir — Portfolio Stylesheet
+   Plain CSS only. No framework/API. Float + clear used
+   for the nav bar, bio layout, and image gallery.
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #FFFFFF;
+  color: #201C18;
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #201C18;
+  font-weight: bold;
+}
+
+a {
+  color: #C7390A;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  border: 1px solid #EFE5DA;
+}
+
+.wrap {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* -----------------------------------------------------
+   Clearfix (used after every floated block)
+----------------------------------------------------- */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* -----------------------------------------------------
+   Header + horizontal nav (float based)
+----------------------------------------------------- */
+.site-header {
+  background-color: #FFF9F5;
+  border-bottom: 2px solid #FF5B1F;
+  padding: 18px 0;
+}
+
+.site-header .wrap {
+  overflow: hidden; /* clears the floats below */
+}
+
+.site-title {
+  float: left;
+  font-family: Georgia, serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #C7390A;
+  padding-top: 6px;
+}
+
+nav.site-nav {
+  float: right;
+}
+
+nav.site-nav ul {
+  list-style: none;
+}
+
+nav.site-nav ul li {
+  float: left;
+  margin-left: 28px;
+}
+
+nav.site-nav ul li a {
+  display: block;
+  padding: 10px 4px;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  color: #201C18;
+  border-bottom: 2px solid transparent;
+}
+
+nav.site-nav ul li a:hover,
+nav.site-nav ul li a.active {
+  color: #FF5B1F;
+  border-bottom: 2px solid #FF5B1F;
+  text-decoration: none;
+}
+
+/* -----------------------------------------------------
+   Page banner
+----------------------------------------------------- */
+.page-banner {
+  background-color: #201C18;
+  color: #FFFFFF;
+  padding: 40px 0;
+  border-bottom: 4px solid #FF5B1F;
+}
+
+.page-banner h1 {
+  color: #FFFFFF;
+  font-size: 34px;
+}
+
+.page-banner p {
+  color: #E7DFD8;
+  margin-top: 8px;
+}
+
+/* -----------------------------------------------------
+   Generic section spacing
+----------------------------------------------------- */
+section {
+  padding: 44px 0;
+  border-bottom: 1px solid #EFE5DA;
+}
+
+section h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  border-left: 5px solid #FF5B1F;
+  padding-left: 12px;
+}
+
+/* -----------------------------------------------------
+   Bio / float + clear layout (image beside text)
+----------------------------------------------------- */
+.bio-block {
+  overflow: hidden; /* clearfix for floated image */
+}
+
+.bio-photo {
+  float: left;
+  width: 260px;
+  margin: 0 28px 16px 0;
+  border: 4px solid #FFE7D9;
+  border-radius: 4px;
+}
+
+.bio-photo.float-right {
+  float: right;
+  margin: 0 0 16px 28px;
+}
+
+.bio-text p {
+  margin-bottom: 14px;
+}
+
+/* -----------------------------------------------------
+   Chip / tag lists
+----------------------------------------------------- */
+ul.chip-list {
+  list-style: none;
+  overflow: hidden;
+}
+
+ul.chip-list li {
+  float: left;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  background-color: #FFF9F5;
+  border: 1px solid #EFE5DA;
+  color: #6B6259;
+  padding: 6px 14px;
+  margin: 0 8px 8px 0;
+  border-radius: 3px;
+}
+
+ul.plain-list {
+  list-style: none;
+}
+
+ul.plain-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #EFE5DA;
+}
+
+/* -----------------------------------------------------
+   Cards (projects / experience / education)
+----------------------------------------------------- */
+.card {
+  border: 1px solid #EFE5DA;
+  padding: 20px;
+  margin-bottom: 18px;
+  background-color: #FFFFFF;
+}
+
+.card h3 {
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+
+.card .tags {
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  color: #C7390A;
+  margin-bottom: 10px;
+}
+
+.card .meta {
+  float: right;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  color: #6B6259;
+}
+
+/* -----------------------------------------------------
+   Image Gallery — float + clear
+----------------------------------------------------- */
+.gallery {
+  overflow: hidden; /* clearfix */
+}
+
+.gallery-item {
+  float: left;
+  width: 31%;
+  margin: 0 3.5% 24px 0;
+  border: 1px solid #EFE5DA;
+  padding: 10px;
+  text-align: center;
+}
+
+.gallery-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.gallery-item img {
+  width: 100%;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.gallery-item p {
+  font-size: 14px;
+  color: #6B6259;
+}
+
+/* -----------------------------------------------------
+   PakOS highlight band
+----------------------------------------------------- */
+.highlight-band {
+  background-color: #FF5B1F;
+  color: #FFFFFF;
+  padding: 36px 0;
+  border-bottom: none;
+}
+
+.highlight-band h2 {
+  color: #FFFFFF;
+  border-left: 5px solid #FFFFFF;
+}
+
+.highlight-band p {
+  max-width: 700px;
+}
+
+/* -----------------------------------------------------
+   Contact page
+----------------------------------------------------- */
+.contact-details {
+  overflow: hidden;
+}
+
+.contact-details .info,
+.contact-details .form {
+  float: left;
+  width: 48%;
+}
+
+.contact-details .form {
+  float: right;
+}
+
+.contact-details dt {
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  color: #6B6259;
+  margin-top: 14px;
+}
+
+.contact-details dd {
+  font-size: 16px;
+  margin-left: 0;
+}
+
+form.contact-form label {
+  display: block;
+  font-size: 14px;
+  margin: 14px 0 6px;
+}
+
+form.contact-form input,
+form.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #EFE5DA;
+  font-family: Georgia, serif;
+  font-size: 15px;
+}
+
+form.contact-form button {
+  margin-top: 18px;
+  background-color: #FF5B1F;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 26px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+form.contact-form button:hover {
+  background-color: #C7390A;
+}
+
+/* -----------------------------------------------------
+   Footer
+----------------------------------------------------- */
+footer.site-footer {
+  background-color: #201C18;
+  color: #B9B0A8;
+  text-align: center;
+  padding: 22px 0;
+  font-size: 14px;
+}
+
+footer.site-footer a {
+  color: #FF9F6E;
+}
+
+/* -----------------------------------------------------
+   Responsive
+----------------------------------------------------- */
+@media (max-width: 700px) {
+  .site-title,
+  nav.site-nav {
+    float: none;
+    text-align: center;
+  }
+
+  nav.site-nav ul li {
+    float: none;
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .bio-photo,
+  .bio-photo.float-right {
+    float: none;
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  .gallery-item {
+    width: 100%;
+    margin-right: 0;
+    float: none;
+  }
+
+  .contact-details .info,
+  .contact-details .form {
+    float: none;
+    width: 100%;
+  }
+
+  .card .meta {
+    float: none;
+    display: block;
+    margin-top: 6px;
+  }
+}
